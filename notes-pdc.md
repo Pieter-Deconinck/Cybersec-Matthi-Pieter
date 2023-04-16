@@ -19,3 +19,8 @@ Make admin look at comment
 Inject cookie into server
 
 https://www.youtube.com/watch?v=BfKK-pNmI6Y
+
+
+**EXTRA** 
+
+MariaDB has a mysql secure installation process, maybe we can intentionally leave something open to add another security flaw? if we need some small extra thing
