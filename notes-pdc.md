@@ -1,0 +1,3 @@
+Remote code execution on wordpress 2020 https://www.cvedetails.com/cve/CVE-2020-28037/ - SCORE 7.5
+        
+        is_blog_installed in wp-includes/functions.php in WordPress before 5.5.2 improperly determines whether WordPress is already installed, which might allow an attacker to perform a new installation, leading to remote code execution (as well as a denial of service for the old installation).
