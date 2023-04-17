@@ -5,6 +5,7 @@ Saving commands here in case I forget them.
 
 sudo apt update  
 sudo apt install apache2 mariadb-server php php-mysql php-fpm -y  
+sudo apt install php-xml
 sudo mysql_secure_installation  
     
         vagrant  
