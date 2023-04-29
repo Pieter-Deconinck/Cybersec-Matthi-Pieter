@@ -7,14 +7,14 @@
 ## VBOX Manage ##
 
 
-function create_vm {
+function modify_vm {
 
     $vmPath = "C:\Users\$($env:UserName)\VirtualBox VMs\"
-    $vmName = "DebianBad"
+    $vmName = "Test123"
     $hdSizeMb = 4096
     $isoPath = "C:\ISO Files"
    
-    vboxmanage createvm --name $vmName --basefolder=$vmPath --register 2> $null
+    
     VBoxManage createmedium --filename $vmPath\$($vmName).vdi --size $hdSizeMb 2> $null
 
     VBoxManage storagectl    $vmName --name       'SATA Controller' --add sata --controller IntelAhci
@@ -29,7 +29,7 @@ function create_vm {
 
     VBoxManage modifyvm $vmName --memory 4096 --vram 1048
 
-    BoxManage modifyvm $vmName --cpus 4
+    VBoxManage modifyvm $vmName --cpus 4
 
     VBoxManage modifyvm $vmName --nic1 bridged
 
@@ -39,5 +39,9 @@ function create_vm {
 
 }
 
+$vmPath = "C:\Users\$($env:UserName)\VirtualBox VMs\"
+$vmName = "DebianBad"
 
+vboxmanage createvm --name $vmName --basefolder=$vmPath --register 2> $null
 
+modify_vm
