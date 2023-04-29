@@ -10,7 +10,7 @@
 function modify_vm {
 
     $vmPath = "C:\Users\$($env:UserName)\VirtualBox VMs\"
-    $vmName = "Test123"
+    $vmName = "DebianBad"
     $hdSizeMb = 4096
     $isoPath = "C:\ISO Files"
    
