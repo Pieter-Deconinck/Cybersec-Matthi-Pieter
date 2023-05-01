@@ -28,6 +28,7 @@ iface enp0s3 inet static
 EOT
 
 # Restart the networking service
+sudo ip addr flush dev enp0s3
 sudo systemctl restart networking
 
 # Install Apache2
