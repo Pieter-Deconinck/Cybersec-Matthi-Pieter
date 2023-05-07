@@ -24,4 +24,4 @@ vboxmanage modifyvm $VM_NAME --memory 4096 --vram 64
 vboxmanage modifyvm $VM_NAME --nic1 nat
 VBoxManage modifyvm $VM_NAME --nic2 intnet
 
-VBoxManage startvm VulDebian --type gui
+VBoxManage startvm $VM_NAME --type gui

@@ -11,7 +11,7 @@ $VM_NAME = "EvilKali"
 $VM_HD_PATH = "C:\VDI Files\Kali\Kali Linux 2022.3 (32bit).vdi"
 VBoxManage startvm $VM_NAME --type gui
 
-VBoxManage createvm --name $VM_NAME --ostype Debian --register
+VBoxManage createvm --name $VM_NAME --ostype KaliLinux --register
 
 vboxmanage createmedium disk --filename "C:\Users\matth\VirtualBox VMs\EvilKali\EvilKali" --size 20480 --format VDI
 
@@ -25,4 +25,4 @@ vboxmanage modifyvm $VM_NAME --memory 4096 --vram 64
 vboxmanage modifyvm $VM_NAME --nic1 nat
 VBoxManage modifyvm $VM_NAME --nic2 intnet
 
-VBoxManage startvm VulDebian --type gui
+VBoxManage startvm $VM_NAME --type gui
