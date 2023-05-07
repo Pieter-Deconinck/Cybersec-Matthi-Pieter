@@ -6,18 +6,23 @@
 
 ## MACHINE NAME =  EvilKali
 
-VBoxManage createvm --name EvilKali --ostype KaliLinux --register
-VBoxManage modifyvm EvilKali --memory 4096 --cpus 4
-VBoxManage modifyvm EvilKali --ioapic on
-VboxManage modifyvm EvilKali --vram=512
 
-# Normaal wordt de juiste adapter automatisch gekozen.
+$VM_NAME = "EvilKali"
+$VM_HD_PATH = "C:\VDI Files\Kali\Kali Linux 2022.3 (32bit).vdi"
+VBoxManage startvm $VM_NAME --type gui
 
-VBoxManage modifyvm EvilKali --nic1 bridged --bridgeadapter1 "$(wmic nic where NetEnabled=true get DeviceID | findstr /r /c:\"[0-9]*\")"
-VBoxManage createhd --filename VirtualBox\ VMs/EvilKali/EvilKali.vdi --size 25000 --format VDI
-VBoxManage storagectl EvilKali --name "SATA Controller" --add sata --controller IntelAhci
+VBoxManage createvm --name $VM_NAME --ostype Debian --register
 
-# Pas zeker je pad aan naar de VDI file indien nodig
+vboxmanage createmedium disk --filename "C:\Users\matth\VirtualBox VMs\EvilKali\EvilKali" --size 20480 --format VDI
 
-VBoxManage storageattach EvilKali --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium "C:\VDI Files\Kali\Kali Linux 2022.3 (32bit).vdi"
-VBoxManage startvm EvilKali --type gui
+
+VBoxManage storagectl ${VM_NAME} --name "SATA Controller" --add sata --controller IntelAHCI
+
+VBoxManage storageattach ${VM_NAME} --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium ${VM_HD_PATH}
+
+vboxmanage modifyvm $VM_NAME --ioapic on
+vboxmanage modifyvm $VM_NAME --memory 4096 --vram 64
+vboxmanage modifyvm $VM_NAME --nic1 nat
+VBoxManage modifyvm $VM_NAME --nic2 intnet
+
+VBoxManage startvm VulDebian --type gui
