@@ -46,7 +46,9 @@ sudo chmod -R 755 /var/www/html/wordpress
 sudo mysql -u root -p -e "CREATE DATABASE wordpress;"
 sudo mysql -u root -p -e "GRANT ALL PRIVILEGES ON wordpress.* TO 'Matthias'@'localhost' IDENTIFIED BY 'finalfantasy';"
 
-# Configure/install WordPress
+
+## 2ND TRY VANAF HIER##
+# Configure/install WordPress   
 
 sudo apt install wordpress curl mariadb -y
 
