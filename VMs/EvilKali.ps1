@@ -9,7 +9,6 @@
 
 $VM_NAME = "EvilKali"
 $VM_HD_PATH = "C:\VDI Files\Kali\Kali Linux 2022.3 (64bit).vdi"
-VBoxManage startvm $VM_NAME --type gui
 
 VBoxManage createvm --name $VM_NAME --ostype KaliLinux --register
 
