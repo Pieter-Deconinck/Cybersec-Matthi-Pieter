@@ -132,3 +132,5 @@ EOF
 
 
 cat ~/wp.sql | mysql --defaults-extra-file=/etc/mysql/debian.cnf
+
+

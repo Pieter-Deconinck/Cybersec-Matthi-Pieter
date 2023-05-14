@@ -8,7 +8,6 @@
 
 $VM_NAME = "DebianV"
 $VM_HD_PATH = "C:\VDI Files\Debian\Debian 11 (32bit).vdi"
-VBoxManage startvm $VM_NAME --type gui
 
 VBoxManage createvm --name $VM_NAME --ostype Debian --register
 
@@ -23,5 +22,6 @@ vboxmanage modifyvm $VM_NAME --ioapic on
 vboxmanage modifyvm $VM_NAME --memory 4096 --vram 64
 vboxmanage modifyvm $VM_NAME --nic1 nat
 VBoxManage modifyvm $VM_NAME --nic2 intnet
+vboxmanage modifyvm $VM_NAME --cpus 4
 
 VBoxManage startvm $VM_NAME --type gui
