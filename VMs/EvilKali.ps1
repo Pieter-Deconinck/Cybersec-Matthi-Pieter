@@ -11,7 +11,7 @@ $VM_NAME = "EvilKali"
 
 VBoxManage createvm --name $VM_NAME --ostype KaliLinux --register
 
-vboxmanage createmedium disk --filename "C:\Users\matth\VirtualBox VMs\${VM_NAME}\${VM_NAME}" --size 20480 --format VDI
+vboxmanage createmedium disk --filename "C:\Users\${env:USERNAME}\VirtualBox VMs\${VM_NAME}\${VM_NAME}" --size 20480 --format VDI
 
 
 VBoxManage storagectl $VM_NAME --name "SATA Controller" --add sata --controller IntelAHCI

@@ -8,7 +8,7 @@
 
 $VM_NAME = "DebianV"
 
-VBoxManage createvm --name $VM_NAME --ostype Debian --register
+VBoxManage createvm --name $VM_NAME --ostype Debian_64 --register
 
 vboxmanage createmedium disk --filename "C:\Users\${env:USERNAME}\VirtualBox VMs\${VM_NAME}\${VM_NAME}" --size 20480 --format VDI
 
