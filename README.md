@@ -2,7 +2,7 @@
 
 This repository is for our Cybersecurity & Virtualization course at [Hogent](https://hogent.be). 
 
-This repository was made by [Pieter deconinck](https://github.com/Pieter-Deconinck) & [Matthias appelmans](https://github.com/mappelman)  
+This repository was made by [Pieter deconinck](https://github.com/Pieter-Deconinck) & [Matthias appelmans](https://github.com/mappelmans)  
 We are 2 students at [Hogent](https://hogent.be), currently studying for a [Professional bachelor in applied informatics](https://www.hogent.be/en/future-student/bachelors/applied-information-technology/).
 
 Feel free to connect on [linkedin](https://www.linkedin.com/in/pieter-deconinck-/)
