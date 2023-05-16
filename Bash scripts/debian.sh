@@ -61,3 +61,5 @@ sudo cp /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-
 sed -i "s/'DB_NAME', 'database_name_here'/'DB_NAME', 'wordpress_DB'/g" /var/www/html/wordpress/wp-config.php
 sed -i "s/'DB_USER', 'username_here'/'DB_USER', 'wordpress_user'/g" /var/www/html/wordpress/wp-config.php
 sed -i "s/'DB_PASSWORD', 'password_here'/'DB_PASSWORD', 'password'/g" /var/www/html/wordpress/wp-config.php
+
+echo "Script completed you may now access localhost and configure wordpress"
